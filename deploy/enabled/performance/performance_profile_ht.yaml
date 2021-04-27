@@ -1,0 +1,23 @@
+apiVersion: performance.openshift.io/v1alpha1
+kind: PerformanceProfile
+metadata:
+  name: ht
+spec:
+  cpu:
+    isolated: "1-25,27-51,53-77,79-103"
+    reserved: "0,52,26,78"
+  hugepages:
+    defaultHugepagesSize: 1G
+    pages:
+    - count: 8 
+      size: 1G
+      node: 0
+    - count: 8
+      size: 1G
+      node: 1
+  nodeSelector:
+    node-role.kubernetes.io/ht: ""
+  numa:
+    topologyPolicy: single-numa-node
+  realTimeKernel:
+    enabled: false

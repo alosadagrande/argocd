@@ -2,4 +2,5 @@
 resources:
   - mcp-worker-ht.yaml
   - mcp-worker-standard.yaml
-  - performance/performance_profile_ht.yaml
+  #- performance/performance_profile_ht.yaml
+  - label-ht.yaml
