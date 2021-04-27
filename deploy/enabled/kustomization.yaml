@@ -1,8 +1,5 @@
 # TODO handle namespace with var
 resources:
-  - performance/operator-namespace.yaml
-  - performance/operator_operatorgroup.yaml
-  - performance/operator_subscription.yaml
-  - sriov/01-sriov-namespace.yaml
-  - sriov/02-sriov-operatorgroup.yaml
-  - sriov/03-sriov-subscription.yaml
+  - mcp-worker-ht.yaml
+  - mcp-worker-standard.yaml
+  - performance/performance_profile_ht.yaml
