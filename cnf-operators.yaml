@@ -8,8 +8,6 @@ operation:
     automated: true
   retry:
     limit: 5
-  sync:
-    revision: 2a04563360dc1062b43e7c3f52758915bc9d5429
 spec:
   destination:
     namespace: argocd
