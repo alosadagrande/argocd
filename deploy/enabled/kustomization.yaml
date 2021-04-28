@@ -9,4 +9,4 @@ resources:
   - cnv/01-cnv-namespace.yaml
   - cnv/02-cnv-operatorgroup.yaml
   - cnv/03-cnv-subscription.yaml
-  - cnv/04-cnv-operator.yaml
+  #- cnv/04-cnv-operator.yaml
