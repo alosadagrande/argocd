@@ -1,0 +1,23 @@
+apiVersion: nmstate.io/v1alpha1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: bond0-eno1-eno2-dhcp-9000
+spec:
+  nodeSelector:
+    node-role.kubernetes.io/standard: ""
+  desiredState:
+    interfaces:
+    - name: bond0
+      mtu: 9000
+      type: bond
+      state: up
+      ipv4:
+        dhcp: true
+        enabled: true
+      link-aggregation:
+        mode: balance-rr
+        options:
+          miimon: '140'
+        slaves:
+        - eno1
+        - eno2
