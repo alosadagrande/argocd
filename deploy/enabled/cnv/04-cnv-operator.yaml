@@ -3,5 +3,7 @@ kind: HyperConverged
 metadata:
   name: kubevirt-hyperconverged
   namespace: openshift-cnv
+  annotations:
+    argocd.argoproj.io/hook: PostSync
 spec:
   BareMetalPlatform: true
