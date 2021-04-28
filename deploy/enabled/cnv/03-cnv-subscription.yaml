@@ -4,8 +4,9 @@ metadata:
   name: hco-operatorhub
   namespace: openshift-cnv
 spec:
+  installPlanApproval: Automatic
   source: redhat-operators
   sourceNamespace: openshift-marketplace
   name: kubevirt-hyperconverged
   startingCSV: kubevirt-hyperconverged-operator.v2.5.5
-  channel: "stable"
+  channel: stable
