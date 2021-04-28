@@ -2,10 +2,9 @@ apiVersion: sriovnetwork.openshift.io/v1
 kind: SriovOperatorConfig
 metadata:
   name: default
-  namespace: openshift-sriov-network-operator
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   configDaemonNodeSelector:
     node-role.kubernetes.io/ht: ""
-  enableInjector: true
-  enableOperatorWebhook: true
   logLevel: 2
