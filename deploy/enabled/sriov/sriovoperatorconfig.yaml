@@ -7,4 +7,3 @@ metadata:
 spec:
   configDaemonNodeSelector:
     node-role.kubernetes.io/ht: ""
-  logLevel: 2
