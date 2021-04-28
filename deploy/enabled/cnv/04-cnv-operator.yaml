@@ -4,6 +4,7 @@ metadata:
   name: kubevirt-hyperconverged
   namespace: openshift-cnv
   annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
     argocd.argoproj.io/hook: PostSync
 spec:
   BareMetalPlatform: true
