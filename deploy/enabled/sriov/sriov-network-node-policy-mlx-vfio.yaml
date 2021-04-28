@@ -19,4 +19,4 @@ spec:
     node-role.kubernetes.io/ht: ""
   numVfs: 32
   priority: 10
-  resourceName: sriov-vfio-ens5f1-mlxnic
+  resourceName: sriov_vfio_ens5f1_mlxnic
