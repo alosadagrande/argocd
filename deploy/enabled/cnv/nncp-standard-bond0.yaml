@@ -8,7 +8,7 @@ spec:
   desiredState:
     interfaces:
     - name: bond0
-      mtu: 9000
+      mtu: 1500 
       type: bond
       state: up
       ipv4:
