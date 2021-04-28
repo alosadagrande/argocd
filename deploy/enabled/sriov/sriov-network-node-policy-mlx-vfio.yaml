@@ -1,0 +1,22 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetworkNodePolicy
+metadata:
+  annotations:
+  name: sriov-networknodepolicy-vfio-mlx-ens5f1
+  namespace: openshift-sriov-network-operator
+spec:
+  deviceType: netdevice
+  isRdma: true
+  linkType: eth
+  mtu: 1500
+  nicSelector:
+    pfNames: ["ens5f1#16-31"] 
+    rootDevices:
+    - "0000:3b:00.1"
+    vendor: "15b3"
+    deviceID: "1015"
+  nodeSelector:
+    node-role.kubernetes.io/ht: ""
+  numVfs: 32
+  priority: 10
+  resourceName: sriov-vfio-ens5f1-mlxnic
