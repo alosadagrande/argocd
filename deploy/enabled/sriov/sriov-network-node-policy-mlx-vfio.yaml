@@ -2,6 +2,7 @@ apiVersion: sriovnetwork.openshift.io/v1
 kind: SriovNetworkNodePolicy
 metadata:
   annotations:
+    argocd.argoproj.io/sync-wave: "1"
   name: sriov-networknodepolicy-vfio-mlx-ens5f1
   namespace: openshift-sriov-network-operator
 spec:
