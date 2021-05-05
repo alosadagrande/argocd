@@ -6,6 +6,13 @@ spec:
   nodeSelector:
     node-role.kubernetes.io/standard: ""
   desiredState:
+    routes:
+      config:
+      - destination: 198.51.100.0/24
+        metric: 150
+        next-hop-address: 192.0.2.1 
+        next-hop-interface: ens5f0
+        table-id: 254
     interfaces:
     - name: bond0
       mtu: 1500 
@@ -21,3 +28,4 @@ spec:
         slaves:
         - eno1
         - eno2
+   
