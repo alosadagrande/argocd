@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cnf-ericsson
+  name: cnf-sno-cnfdb1
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -18,7 +18,7 @@ spec:
       recurse: true
     path: deploy/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
-    targetRevision: cnf-ericsson
+    targetRevision: cnf-sno-cnfdb1
   syncPolicy:
     automated:
       selfHeal: true
