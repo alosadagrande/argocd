@@ -1,5 +1,5 @@
 resources:
-- performance/performance_profile_ht.yaml
+- performance/performance_profile_sno_cnfdb1.yaml
 #- sriov/sriov-network-node-policy-intel-netdevice.yaml
 #- sriov/sriov-network-node-policy-intel-vfio.yaml
 #- sriov/sriovoperatorconfig.yaml
