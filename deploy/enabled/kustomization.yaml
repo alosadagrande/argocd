@@ -1,8 +1,8 @@
 resources:
-- performance/performance_profile_ht.yaml
-- sriov/sriov-network-node-policy-intel-netdevice.yaml
-- sriov/sriov-network-node-policy-intel-vfio.yaml
-- sriov/sriovoperatorconfig.yaml
+#- performance/performance_profile_ht.yaml
+#- sriov/sriov-network-node-policy-intel-netdevice.yaml
+#- sriov/sriov-network-node-policy-intel-vfio.yaml
+#- sriov/sriovoperatorconfig.yaml
 - auth/htpass-secret.yaml
 - auth/oauth.yaml
 #- monitoring/alertmanager-main.yaml
