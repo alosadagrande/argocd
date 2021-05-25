@@ -13,9 +13,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    directory:
-      jsonnet: {}
-      recurse: true
     path: deploy/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
     targetRevision: cnf-sno-cnfdb1
