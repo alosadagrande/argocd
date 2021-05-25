@@ -5,8 +5,11 @@ metadata:
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
+operation:
+  initiatedBy:
+    automated: true
+  retry:
+    limit: 5
 spec:
   destination:
     namespace: argocd
@@ -19,3 +22,13 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
+      prune: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=false
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
