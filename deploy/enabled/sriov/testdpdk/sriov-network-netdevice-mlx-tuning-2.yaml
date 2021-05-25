@@ -1,0 +1,7 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  name: macvlan-tuning-2
+  namespace: testdpdk
+spec:
+  config: '{ "cniVersion": "0.4.0", "name": "macvlan-plugin", "plugins": [ {"type":"sriov", "spoofChk":"off", "vlan":0,"vlanQoS":0,"ipam":{"type":"static", "addresses": [{"address": "10.19.11.102/26"}]}}, { "type": "tuning", "name": "tuning-arp", "sysctl": { "net.ipv4.conf.net1.proxy_arp": "1" } }] }'

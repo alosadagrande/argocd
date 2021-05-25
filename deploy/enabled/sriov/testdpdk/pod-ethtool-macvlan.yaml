@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  generateName: pod-macvlan-
+  annotations:
+    k8s.v1.cni.cncf.io/networks: testdpdk/macvlan
+  namespace: testdpdk 
+spec:
+  containers:
+  - name: troubleshoot
+    image: quay.io/alosadag/troubleshoot:latest

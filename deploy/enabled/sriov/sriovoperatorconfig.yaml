@@ -6,4 +6,4 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
 spec:
   configDaemonNodeSelector:
-    node-role.kubernetes.io/ht: ""
+    node-role.kubernetes.io/master: ""
