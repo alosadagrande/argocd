@@ -1,0 +1,26 @@
+apiVersion: nmstate.io/v1alpha1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: eno1-ht
+spec:
+  nodeSelector:
+    node-role.kubernetes.io/ht: ""
+  desiredState:
+    routes:
+      config:
+      - destination: 198.51.100.0/24
+        metric: 150
+        next-hop-address: 192.0.2.1
+        next-hop-interface: eno1
+        table-id: 254
+    interfaces:
+    - name: eno1
+      type: ethernet
+      mtu: 1500 
+      state: up
+      ipv4:
+        address:
+        - ip: 192.0.2.251
+          prefix-length: 24
+        enabled: true
+   
