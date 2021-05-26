@@ -3,21 +3,21 @@ kind: SriovNetworkNodePolicy
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-  name: sriov-networknodepolicy-vfio-intel-ens1f1
+  name: sriov-networknodepolicy-vfio-intel-ens4f0
   namespace: openshift-sriov-network-operator
 spec:
-  deviceType: netdevice
-  isRdma: true
+  deviceType: vfio-pci 
+  isRdma: false
   linkType: eth
   mtu: 1500
   nicSelector:
-    pfNames: ["ens1f1#16-31"] 
+    pfNames: ["ens4f0#0-7"] 
     rootDevices:
-    - "0000:12:00.1"
+    - "0000:af:00.0"
     vendor: "8086"
     deviceID: "158b"
   nodeSelector:
     node-role.kubernetes.io/master: ""
-  numVfs: 32
+  numVfs: 8
   priority: 10
-  resourceName: sriov_vfio_ens1f1_intelnic
+  resourceName: sriov_vfio_ens4f0_intelnic
