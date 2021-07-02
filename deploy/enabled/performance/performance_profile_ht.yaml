@@ -16,7 +16,7 @@ spec:
       size: 1G
       node: 1  
   machineConfigPoolSelector:
-    pools.operator.machineconfiguration.openshift.io/master: ""
+    pools.operator.machineconfiguration.openshift.io/ht: ""
   numa:
     topologyPolicy: single-numa-node
   realTimeKernel:
