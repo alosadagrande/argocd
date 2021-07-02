@@ -9,10 +9,10 @@ spec:
   hugepages:
     defaultHugepagesSize: 1G
     pages:
-    - count: 8 
+    - count: 0
       size: 1G
       node: 0
-    - count: 8
+    - count: 0
       size: 1G
       node: 1
   nodeSelector:
