@@ -16,7 +16,9 @@ spec:
       size: 1G
       node: 1  
   machineConfigPoolSelector:
-    pools.operator.machineconfiguration.openshift.io/ht: ""
+    pools.operator.machineconfiguration.openshift.io/ht: ""  
+  nodeSelector:
+    node-role.kubernetes.io/ht: "" 
   numa:
     topologyPolicy: single-numa-node
   realTimeKernel:
