@@ -14,7 +14,7 @@ spec:
   source:
     directory:
       jsonnet: {}
-    path: deploy/enabled
+    path: deploy/4.7/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
     targetRevision: cnf-ericsson
   syncPolicy:
