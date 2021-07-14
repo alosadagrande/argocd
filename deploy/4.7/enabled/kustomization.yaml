@@ -6,7 +6,7 @@ resources:
 - sriov/sriov-network-node-policy-mlx-netdevice.yaml
 - sriov/sriov-network-node-policy-mlx-vfio.yaml
 - sriov/sriovoperatorconfig.yaml
-- cnv/04-cnv-operator.yaml
+#- cnv/04-cnv-operator.yaml
 - cnv/nncp-standard-bond0.yaml
 - auth/htpass-secret.yaml
 - auth/oauth.yaml
