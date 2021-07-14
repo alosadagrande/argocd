@@ -9,4 +9,3 @@ resources:
 - cnv/nncp-standard-bond0.yaml
 - auth/htpass-secret.yaml
 - auth/oauth.yaml
-

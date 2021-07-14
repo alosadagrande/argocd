@@ -5,6 +5,7 @@ metadata:
   namespace: openshift-machine-config-operator
   labels:
     machineconfiguration.openshift.io/role: ht
+    pools.operator.machineconfiguration.openshift.io/ht: ""
 spec:
   paused: false
   machineConfigSelector:
