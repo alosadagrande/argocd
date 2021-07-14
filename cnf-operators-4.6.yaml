@@ -18,7 +18,7 @@ spec:
   source:
     directory:
       jsonnet: {}
-      recurse: true
+#     recurse: true
     path: deploy/4.6/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
     targetRevision: main
