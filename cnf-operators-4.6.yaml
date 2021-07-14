@@ -16,19 +16,12 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: deploy/sno-4.8/enabled
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: deploy/46/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
     targetRevision: main
   syncPolicy:
     automated:
       selfHeal: true
-      prune: false
-    syncOptions:
-      - Validate=true
-      - CreateNamespace=false
-    retry:
-      limit: 5
-      backoff:
-        duration: 5s
-        factor: 2
-        maxDuration: 3m

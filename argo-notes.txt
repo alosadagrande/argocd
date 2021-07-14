@@ -1,0 +1,21 @@
+oc create ns argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.0.0/manifests/install.yaml
+oc -n argocd create route passthrough argocd-server --service=argocd-server --port=https --insecure-policy=Redirect
+ARGO_PASSWORD=$(oc -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d)
+argocd --insecure --grpc-web login argocd-server-argocd.apps.eu-cluster.c78f.sandbox1269.opentlc.com:443 --username admin --password ${ARGO_PASSWORD}
+argocd account update-password --account admin --current-password "${ARGO_PASSWORD}" --new-password "redhat123"
+argocd repo add https://github.com/mvazquezc/sleeping-through-disasters.git --name sleeping-through-disasters
+argocd app create --project default --name argo-apps \
+--repo https://github.com/mvazquezc/sleeping-through-disasters.git \
+--path . \
+--dest-server https://kubernetes.default.svc \
+--dest-namespace argocd --revision argo-apps \
+--self-heal --sync-policy automated
+
+NUMA node0 CPU(s):   0-25,52-77
+NUMA node1 CPU(s):   26-51,78-103
+
+NUMA node0 CPU(s):   0-19,40-59
+NUMA node1 CPU(s):   20-39,60-79
+
+
