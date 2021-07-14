@@ -6,7 +6,6 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   destination:
     namespace: argocd
@@ -15,7 +14,6 @@ spec:
   source:
     directory:
       jsonnet: {}
-      recurse: true
     path: deploy/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
     targetRevision: cnf-ericsson
