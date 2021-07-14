@@ -3,6 +3,8 @@ kind: Subscription
 metadata:
   name: hco-operatorhub
   namespace: openshift-cnv
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   installPlanApproval: Automatic
   source: redhat-operators
