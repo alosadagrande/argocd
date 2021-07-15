@@ -6,7 +6,6 @@ resources:
   - sriov/01-sriov-namespace.yaml
   - sriov/02-sriov-operatorgroup.yaml
   - sriov/03-sriov-subscription.yaml
-  - cnv/01-cnv-namespace.yaml
-  - cnv/02-cnv-operatorgroup.yaml
-  - cnv/03-cnv-subscription.yaml
-  - cnv/04-cnv-operator.yaml
+  - nmstate/01-nmstate-namespace.yaml
+  - nmstate/02-nmstate-operatorgroup.yaml
+  - nmstate/03-nmstate-subscription.yaml
