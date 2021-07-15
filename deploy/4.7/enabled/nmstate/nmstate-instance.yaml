@@ -3,8 +3,6 @@ kind: NMState
 metadata:
   name: nmstate
   annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   nodeSelector:
     beta.kubernetes.io/arch: amd64
