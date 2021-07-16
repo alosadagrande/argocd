@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARGOCD_VERSION=v2.0.4
+ARGOCD_VERSION=v2.0.4  #https://github.com/argoproj/argo-cd/releases
 ARGOCD_NEW_PASSWORD=${1:-redhat123}
 GIT_REPO_URL=https://github.com/alosadagrande/argocd.git
 ARGOCD_REPO_NAME=cnf
