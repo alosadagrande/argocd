@@ -10,3 +10,4 @@ resources:
   - nmstate/01-nmstate-namespace.yaml
   - nmstate/02-nmstate-operatorgroup.yaml
   - nmstate/03-nmstate-subscription.yaml
+  - nmstate/04-nmstate-instance.yaml
