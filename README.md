@@ -208,3 +208,7 @@ $ oc get -oyaml applications cnf-cluster1
 ```
 
 :warning: The point of having folders for each version is because yaml definitions are different or they have different API versions. For instance, the performanceprofile changes quite a few settings from 4.6 to 4.7 channels. A better approach could've been to use kustomize extensively by having a base folder and applying just the changes in each folder instead of replicate the full structure.
+
+## Conclusion
+
+At this point a basic GitOps configuration is set up. Now you are able to commit changes to either the configuration application or even include new operators to be installed in the cnf-operators application. Changes commited in the proper repo will be replicated into the cluster where ArgoCD is installed and configured to continuously seek changes in the git repo.
