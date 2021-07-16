@@ -1,0 +1,33 @@
+apiVersion: nmstate.io/v1beta1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: bond0-eno1-eno2-dhcp-9000
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  nodeSelector:
+    node-role.kubernetes.io/standard: ""
+  desiredState:
+    routes:
+      config:
+      - destination: 198.51.100.0/24
+        metric: 150
+        next-hop-address: 192.0.2.1 
+        next-hop-interface: ens5f0
+        table-id: 254
+    interfaces:
+    - name: bond0
+      mtu: 1500 
+      type: bond
+      state: up
+      ipv4:
+        dhcp: true
+        enabled: true
+      link-aggregation:
+        mode: balance-rr
+        options:
+          miimon: '140'
+        slaves:
+        - eno1
+        - eno2
+   

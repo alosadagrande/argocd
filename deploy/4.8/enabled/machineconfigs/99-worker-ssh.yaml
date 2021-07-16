@@ -1,0 +1,23 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: worker
+  name: 99-worker-ssh
+spec:
+  config:
+    ignition:
+      version: 3.2.0
+    passwd:
+      users:
+      - name: core
+        sshAuthorizedKeys:
+        - |
+          ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDiN6eHT9GfKeNfJRXANcz05JWUnKwnkl4cq7u2umJLFfF3iLl5aPu9yCotioqgnb/C85OK9aOkxNeJ1H2WLOD+YMuO4VFLXmt9s7xIx3eBxjUDOjyorq43LmnZevy+2XJ5nAN8tgjn0IgaGTthKgoX42m0Ij3I8adu9PXpQJaEPemmMt9ZacvitqyxTxU56nrdthhusJPoiDpA9Y9EoARipmuHhNQC+b/05WxxB1yHZmK+Ub84s9YtVfKEu4eQa82MYHQTLUiVbBqRXgKZ5cRAGy7aaeExAIRm/1x7h9JxAkm6ilcCXP9K8awFtp71LuHI6JSEyk/zBpckVA9q5DPEXiO0pb1rjOOZ9AKU0AIN0tVQQQMP1c5+7XEh7GCgC4TlO+Y00wBvAChCMLrKotvWvwEi9NAWrkJuvuQKUt7QfyPqmWMl8KfjspYJZckEqlMOUFzUM8M0GwVUsoo27wmGuQ+IN1s9r9jtUChJxuqO93Vt09QbfQZT8JiJnFSIPU8= kni@bm-helper-ericsson.cloud.lab.eng.bos.redhat.com
+        - |
+          ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZnG8AIzlDAhpyENpK2qKiTT8EbRWOrz7NXjRzopbPu215mocaJgjjwJjh1cYhgPhpAp6M/ttTk7I4OI7g4588Apx4bwJep6oWTU35LkY8ZxkGVPAJL8kVlTdKQviDv3XX12l4QfnDom4tm4gVbRH0gNT1wzhnLP+LKYm2Ohr9D7p9NBnAdro6k++XWgkDeijLRUTwdEyWunIdW1f8G0Mg8Y1Xzr13BUo3+8aey7HLKJMDtobkz/C8ESYA/f7HJc5FxF0XbapWWovSSDJrr9OmlL9f4TfE+cQk3s+eoKiz2bgNPRgEEwihVbGsCN4grA+RzLCAOpec+2dTJrQvFqsD alosadag@sonnelicht.local
+  extensions: null
+  fips: false
+  kernelArguments: null
+  kernelType: ""
+  osImageURL: ""

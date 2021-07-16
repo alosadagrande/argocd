@@ -1,0 +1,9 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovOperatorConfig
+metadata:
+  name: default
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  configDaemonNodeSelector:
+    node-role.kubernetes.io/ht: ""
