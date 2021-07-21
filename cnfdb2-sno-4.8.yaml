@@ -16,7 +16,7 @@ spec:
       jsonnet: {}
     path: deploy/sno/4.8/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
-    targetRevision: cnfdb1 
+    targetRevision: cnfdb2
   syncPolicy:
     automated:
       selfHeal: true
