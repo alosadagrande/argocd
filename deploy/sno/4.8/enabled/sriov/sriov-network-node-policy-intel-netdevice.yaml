@@ -1,0 +1,18 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetworkNodePolicy
+metadata:
+  name: xxv710-4
+  namespace: openshift-sriov-network-operator
+spec:
+  deviceType: netdevice
+  isRdma: false
+  linkType: eth
+  mtu: 1500
+  nicSelector:
+    pfNames:
+    - ens4f0
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  numVfs: 8
+  priority: 10 
+  resourceName: xxv710_4

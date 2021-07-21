@@ -1,7 +1,7 @@
 apiVersion: nmstate.io/v1beta1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: bond0-eno1-eno2-dhcp-9000
+  name: bond0-eno3-eno4-dhcp
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
@@ -10,10 +10,10 @@ spec:
   desiredState:
     routes:
       config:
-      - destination: 198.51.100.0/24
+      - destination: 192.168.123.0/24
         metric: 150
-        next-hop-address: 192.0.2.1 
-        next-hop-interface: ens5f0
+        next-hop-address: 192.168.254.1 
+        next-hop-interface: ens1f1
         table-id: 254
     interfaces:
     - name: bond0
@@ -21,13 +21,14 @@ spec:
       type: bond
       state: up
       ipv4:
-        dhcp: true
+        address:
+        - ip: 192.168.122.250
+          prefix-length: 24
         enabled: true
       link-aggregation:
         mode: balance-rr
         options:
           miimon: '140'
         slaves:
-        - eno1
-        - eno2
-   
+        - eno3
+        - eno4

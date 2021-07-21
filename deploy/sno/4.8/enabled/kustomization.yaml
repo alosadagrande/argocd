@@ -1,7 +1,7 @@
 resources:
 - performance/performance-profile-sno.yaml
-#- sriov/sriov-network-node-policy-mlx-netdevice.yaml
-#- sriov/sriov-network-node-policy-mlx-vfio.yaml
+- sriov/sriov-network-node-policy-intel-netdevice.yaml
+- sriov/sriov-network-node-policy-intel-vfio.yaml
 #- nmstate/nncp-standard-bond0.yaml
 - machineconfigs/99-master-ssh.yaml
 - ntp/99-master-chrony-configuration.yaml
