@@ -10,6 +10,15 @@ spec:
   cpu:
     isolated: 4-39,44-79
     reserved: 0-3,40-43
+  hugepages:
+    defaultHugepagesSize: 1G
+    pages:
+    - count: 8
+      size: 1G
+      node: 0
+    - count: 0
+      size: 1G
+      node: 1
   machineConfigPoolSelector:
     pools.operator.machineconfiguration.openshift.io/master: ""
   net:
