@@ -1,0 +1,8 @@
+resources:
+- performance/performance-profile-sno.yaml
+#- sriov/sriov-network-node-policy-mlx-netdevice.yaml
+#- sriov/sriov-network-node-policy-mlx-vfio.yaml
+#- nmstate/nncp-standard-bond0.yaml
+- machineconfigs/99-master-ssh.yaml
+- monitoring/alertmanager-main.yaml
+- monitoring/cluster-monitoring-config.yaml

@@ -1,0 +1,27 @@
+apiVersion: performance.openshift.io/v2
+kind: PerformanceProfile
+metadata:
+  name: performance-sno
+spec:
+  additionalKernelArgs:
+  - audit=0
+  - mce=off
+  - nmi_watchdog=0
+  hugepages:
+    defaultHugepagesSize: 1G
+    pages:
+    - count: 4 
+      size: 1G
+  cpu:
+    isolated: 2-15,18-19,22-23,26-31
+    reserved: 0-1,16-17,20-21,24-25
+  machineConfigPoolSelector:
+    pools.operator.machineconfiguration.openshift.io/master: ""
+  net:
+    userLevelNetworking: true
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  numa:
+    topologyPolicy: single-numa-node
+  realTimeKernel:
+    enabled: false 
