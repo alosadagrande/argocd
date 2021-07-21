@@ -8,5 +8,5 @@ data:
     enableUserWorkload: true 
     prometheusK8s:
       externalLabels:
-        clustername: ericsson.lab.bos.redhat.com
+        clustername: cnfdb2.lab.bos.redhat.com
 
