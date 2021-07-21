@@ -16,7 +16,7 @@ spec:
       jsonnet: {}
     path: deploy/sno/4.8/enabled
     repoURL: https://github.com/alosadagrande/argocd.git
-    targetRevision: cnf-ericsson
+    targetRevision: eric1 
   syncPolicy:
     automated:
       selfHeal: true
