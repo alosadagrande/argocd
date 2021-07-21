@@ -3,6 +3,8 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: openshift-sriov-network-operator
+  annotations:
+    workload.openshift.io/allowed: management
   name: openshift-sriov-network-operator
 spec: {}
 status: {}
