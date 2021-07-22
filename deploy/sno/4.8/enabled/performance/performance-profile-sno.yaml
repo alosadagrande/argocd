@@ -2,6 +2,8 @@ apiVersion: performance.openshift.io/v2
 kind: PerformanceProfile
 metadata:
   name: performance-sno
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   additionalKernelArgs:
   - audit=0
