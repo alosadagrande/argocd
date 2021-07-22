@@ -3,7 +3,7 @@ kind: SriovNetworkNodePolicy
 metadata:
   name: xxv710-4
   namespace: openshift-sriov-network-operator
-  annotation:
+  annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   deviceType: netdevice
