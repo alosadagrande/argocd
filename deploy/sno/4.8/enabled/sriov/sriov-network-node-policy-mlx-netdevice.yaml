@@ -2,7 +2,7 @@ apiVersion: sriovnetwork.openshift.io/v1
 kind: SriovNetworkNodePolicy
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: sriov-networknodepolicy-netdevice-mlx-ens5f1
   namespace: openshift-sriov-network-operator
 spec:
