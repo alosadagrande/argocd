@@ -3,6 +3,8 @@ kind: SriovNetworkNodePolicy
 metadata:
   name: xxv710-1
   namespace: openshift-sriov-network-operator
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   deviceType: vfio-pci
   isRdma: false
