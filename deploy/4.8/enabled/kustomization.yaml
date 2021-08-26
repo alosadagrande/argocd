@@ -1,8 +1,8 @@
 # TODO handle namespace with var
 resources:
   - performance/01-pao-namespace.yaml
-  - performance/021-pao-catalogsource.yaml
-#  - performance/02-pao-operatorgroup.yaml
+# - performance/021-pao-catalogsource.yaml
+  - performance/02-pao-operatorgroup.yaml
   - performance/03-pao-subscription.yaml
   - sriov/01-sriov-namespace.yaml
   - sriov/02-sriov-operatorgroup.yaml
