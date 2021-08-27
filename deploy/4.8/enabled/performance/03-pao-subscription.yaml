@@ -8,5 +8,5 @@ spec:
   channel: "4.8" 
   name: performance-addon-operator
   source: redhat-operators
-  sourceNamespace: openshift-marketplac
+  sourceNamespace: openshift-marketplace
 
