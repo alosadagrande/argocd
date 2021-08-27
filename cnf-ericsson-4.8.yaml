@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cnf-ericsson
+  name: cnf-ericsson-config
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
