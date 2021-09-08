@@ -6,9 +6,9 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   additionalKernelArgs:
-  - audit=0
-  - mce=off
-  - nmi_watchdog=0
+  - "rcupdate.rcu_normal_after_boot=0"
+  - "idle=poll"
+  - "nohz_full=4-39,44-79"
   cpu:
     isolated: 4-39,44-79
     reserved: 0-3,40-43
